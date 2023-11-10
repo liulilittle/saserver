@@ -1,0 +1,1053 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\battle">
+      <UniqueIdentifier>{04499c85-a1da-4f0d-a6b8-28b268169f75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\char">
+      <UniqueIdentifier>{d75eaf2c-03a5-4460-aac3-e13d3052c573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\item">
+      <UniqueIdentifier>{893b8895-8f98-4ade-a11c-2ac782995271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\longzoro">
+      <UniqueIdentifier>{23b994e8-4fbc-4c54-9f1a-ba6c9bd77b32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\magic">
+      <UniqueIdentifier>{a2bcf60e-2edf-46e7-bcc1-1409f2789996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\map">
+      <UniqueIdentifier>{69130a70-e40b-42ea-8ba5-7c769a793151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\mylua">
+      <UniqueIdentifier>{364fe146-b56b-4036-96b7-9691fa39c221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\npc">
+      <UniqueIdentifier>{f86a7abc-a19e-41b4-9ddb-debc75adf005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\longzoro">
+      <UniqueIdentifier>{65e63e7e-5db5-4e01-a8f7-4c4e9d992065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\mylua">
+      <UniqueIdentifier>{f64376bc-7af9-4186-9b1c-d132fb8515b5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="autil.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="buf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="callfromac.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="callfromcli.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="configfile.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="descrypt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="function.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="handletime.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="init.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="link.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="log.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lssproto_serv.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lssproto_util.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="msignal.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="net.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="object.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="saacproto_cli.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="saacproto_util.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shop.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="util.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="battle\battle.c">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="battle\battle_ai.c">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="battle\battle_command.c">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="battle\battle_event.c">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="battle\battle_item.c">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="battle\battle_magic.c">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="battle\pet_skill.c">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="battle\profession_skill.c">
+      <Filter>源文件\battle</Filter>
+    </ClCompile>
+    <ClCompile Include="char\addressbook.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char_angel.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char_base.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char_data.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char_event.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char_item.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char_party.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char_talk.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\char_walk.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\chatmagic.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\chatroom.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\encount.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\enemy.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\event.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\family.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\pet.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\pet_event.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\petmail.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\skill.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\title.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="char\trade.c">
+      <Filter>源文件\char</Filter>
+    </ClCompile>
+    <ClCompile Include="item\item.c">
+      <Filter>源文件\item</Filter>
+    </ClCompile>
+    <ClCompile Include="item\item_event.c">
+      <Filter>源文件\item</Filter>
+    </ClCompile>
+    <ClCompile Include="item\item_gen.c">
+      <Filter>源文件\item</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\blowfish.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\characters.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\crypto.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\luckstar.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\move.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\newshop.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\playerquestion.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\sasql_linux.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="magic\magic.c">
+      <Filter>源文件\magic</Filter>
+    </ClCompile>
+    <ClCompile Include="magic\magic_base.c">
+      <Filter>源文件\magic</Filter>
+    </ClCompile>
+    <ClCompile Include="magic\magic_field.c">
+      <Filter>源文件\magic</Filter>
+    </ClCompile>
+    <ClCompile Include="map\map_deal.c">
+      <Filter>源文件\map</Filter>
+    </ClCompile>
+    <ClCompile Include="map\map_util.c">
+      <Filter>源文件\map</Filter>
+    </ClCompile>
+    <ClCompile Include="map\map_warppoint.c">
+      <Filter>源文件\map</Filter>
+    </ClCompile>
+    <ClCompile Include="map\readmap.c">
+      <Filter>源文件\map</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\ablua.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\battlebase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\charbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\configbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\enemytempbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\family.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\function.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\init.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\itembase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\lssprotobase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\magicbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\mapbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\mylua.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\netbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\npcbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\objectbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\offlinebase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\otherbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\petskill.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\profession_skill.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\saacproto.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="mylua\sasqlbase.c">
+      <Filter>源文件\mylua</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_action.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_airplane.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_alldoman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_autopk.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_bankman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_bodylan.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_bus.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_charm.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_checkman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_dengon.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_door.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_doorman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_duelranking.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_eventaction.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_exchangeman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_familyman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_fmchallenge.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_fmdengon.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_fmhealer.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_fmletter.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_fmpkcallman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_fmpkman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_fmwarpman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_freepetskillshop.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_gamblebank.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_gamblemaster.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_gambleroulette.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_healer.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_itemchange.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_itemshop.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_janken.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_luckyman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_makepair.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_manorsman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_mic.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_msg.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_newnpcman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_newvipshop.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_npcenemy.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_oldman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_pauctionman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_petfusion.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_petmaker.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_petracemaster.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_petracepet.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_petshop.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_petskillshop.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_poolitemshop.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_quiz.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_riderman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_roomadminnew.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_sample.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_savepoint.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_scheduleman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_ship.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_signboard.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_simpleshop.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_storyteller.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_sysinfo.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_timeman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_townpeople.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_transerman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_transmigration.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_vipshop.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_warp.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_warpman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_welfare.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_windowhealer.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npc_windowman.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npccreate.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npcgen.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npctemplate.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\npcutil.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="npc\readnpc.c">
+      <Filter>源文件\npc</Filter>
+    </ClCompile>
+    <ClCompile Include="md5_encrypt.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\aes.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\xxtea.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+    <ClCompile Include="longzoro\base64.c">
+      <Filter>源文件\longzoro</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\addressbook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\anim_tbl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\autil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\battle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\battle_ai.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\battle_command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\battle_event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\battle_item.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\battle_magic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\blowfish.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\buf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\char.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\char_base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\char_data.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\char_event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\char_talk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\chatmagic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\chatroom.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\configfile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\correct_bug.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\defaultGroundEnemy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\defaultPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\encount.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\enemy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\enemyexptbl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\family.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\function.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\handletime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\init.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\item.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\item_event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\item_gen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\item_trade.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\levelup.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\link.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lssproto_serv.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lssproto_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\magic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\magic_base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\magic_field.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\map_deal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\map_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\map_warppoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mclient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\md5_encrypt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\msignal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\net.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_action.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_airplane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_alldoman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_autopk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_bankman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_bodylan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_bus.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_charm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_checkman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_Dengon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_door.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_doorman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_duelranking.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_eventaction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_exchangeman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_familyman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_fmdengon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_fmhealer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_fmletter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_fmpkcallman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_fmpkman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_fmwarpman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_freepetskillshop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_gamblebank.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_gamblemaster.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_gambleroulette.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_healer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_itemchange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_itemshop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_janken.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_luckyman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_makepair.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_manorsman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_mic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_msg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_mtradenpcman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_newnpcman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_newvipshop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_npcenemy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_oldman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_pauctionman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_petfusion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_petmaker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_petracemaster.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_petracepet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_petshop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_petskillshop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_pettransman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_poolitemshop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_quiz.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_riderman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_roomadminnew.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_sample.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_savepoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_scheduleman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_sellsthman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_signboard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_simpleshop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_stoneserviceman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_storyteller.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_sysinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_timeman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_townpeople.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_transerman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_transmigration.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_vipshop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_warp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_warpman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_welfare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_welfare2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_windowhealer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npc_windowman.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npccreate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npcgen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npcserver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npctemplate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\npcutil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\object.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pet_event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pet_skill.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pet_skillinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\petmail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\profession_skill.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\readmap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\readnpc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\saacproto_cli.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\saacproto_util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shop.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\skill.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sndcnf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\title.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trade.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\version_pk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\allblues.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\attestation.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\characters.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\debug.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\longzoro.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\luckstar.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\move.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\newshop.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\playerquestion.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\sasql.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\longzoro\version.h">
+      <Filter>头文件\longzoro</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mylua\ablua.h">
+      <Filter>头文件\mylua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mylua\base.h">
+      <Filter>头文件\mylua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mylua\function.h">
+      <Filter>头文件\mylua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mylua\mylua.h">
+      <Filter>头文件\mylua</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ggsrv30.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\aes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\xxtea.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\base64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

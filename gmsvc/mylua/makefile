@@ -1,0 +1,1207 @@
+export CC=gcc
+export RM=rm -f
+export AR=ar cr
+export MV=mv
+export RANLIB=ranlib
+export SED=sed
+
+
+export SHELL=/bin/sh
+
+INCFLAGS=-I. -I../include -I../include/lua
+
+CFLAGS=-w -O0 -g -ggdb -rdynamic $(INCFLAGS)
+#Pentium 4 (Intel)
+#CFLAGS=-march=pentium4 -O3 -pipe -fomit-frame-pointer $(INCFLAGS)
+#Athlon XP (AMD)
+#CFLAGS="-march=athlon-xp -O3 -pipe -fomit-frame-pointer" $(INCFLAGS)
+#Athlon64£º
+#CFLAGS="-O2 -march=athlon64 -ftracer -fprefetch-loop-arrays -pipe" $(INCFLAGS)
+
+PROG=libmylua.a
+
+SRC=mylua.c ablua.c init.c charbase.c npcbase.c function.c lssprotobase.c battlebase.c objectbase.c mapbase.c otherbase.c configbase.c itembase.c magicbase.c offlinebase.c netbase.c enemytempbase.c sasqlbase.c saacproto.c family.c petskill.c profession_skill.c
+
+OBJ=$(SRC:.c=.o)
+
+ifeq (0,$(MAKELEVEL))
+CC=gcc
+RM=rm -f
+AR=ar cr
+MV=mv
+RANLIB=ranlib
+SED=sed
+SHELL=/bin/sh
+endif
+
+all: $(PROG)
+
+$(PROG): $(OBJ)
+	$(RM) $(PROG)
+	$(AR) $(PROG) $(OBJ)
+	$(RANLIB) $(PROG)
+
+dos2unix:
+	dos2unix $(SRC) makefile
+	
+chmod:
+	chmod 777 $(SRC) makefile
+	
+depend:
+	$(MV) makefile makefile.bak
+	$(SED) -ne '1,/^# DO NOT DELETE THIS LINE/p' makefile.bak>makefile
+	$(CC) $(INCFLAGS) -M $(SRC) >> makefile 
+	chmod 777 makefile
+	
+clean:
+	$(RM) $(PROG)
+	$(RM) $(OBJ)
+	$(RM) *~
+
+distclean:
+	$(RM) $(PROG)
+	$(RM) $(OBJ)
+	$(RM) *~
+	$(MV) makefile Makefile.bak
+	$(SED) -ne '1,/^# DO NOT DELETE THIS LINE/p' makefile.bak>makefile
+	$(RM) makefile.bak
+
+# DO NOT DELETE THIS LINE
+mylua.o: mylua.c /usr/include/stdc-predef.h /usr/include/signal.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/sigset.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/signum.h /usr/include/time.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/bits/sigstack.h /usr/include/sys/ucontext.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/sigthread.h \
+ /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h \
+ /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/types.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ /usr/include/string.h /usr/include/xlocale.h /usr/include/dirent.h \
+ /usr/include/bits/dirent.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ ../include/autil.h ../include/version.h ../include/correct_bug.h \
+ ../include/common.h /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/md5_encrypt.h ../include/buf.h \
+ ../include/util.h /usr/include/sys/time.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix2_lim.h \
+ ../include/lua/lauxlib.h ../include/lua/lua.h ../include/lua/lualib.h \
+ ../include/longzoro/version.h ../include/mylua/mylua.h
+ablua.o: ablua.c /usr/include/stdc-predef.h /usr/include/pthread.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sched.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/time.h /usr/include/bits/sched.h /usr/include/bits/time.h \
+ /usr/include/xlocale.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/bits/setjmp.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/dirent.h /usr/include/bits/dirent.h \
+ /usr/include/bits/posix1_lim.h /usr/include/bits/local_lim.h \
+ /usr/include/linux/limits.h /usr/include/string.h \
+ /usr/include/sys/types.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/sys/sysmacros.h /usr/include/sys/stat.h \
+ /usr/include/bits/stat.h ../include/autil.h ../include/version.h \
+ ../include/correct_bug.h ../include/common.h /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h ../include/longzoro/version.h \
+ ../include/longzoro/longzoro.h ../include/longzoro/debug.h \
+ ../include/md5_encrypt.h ../include/util.h /usr/include/sys/time.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/mylua/mylua.h \
+ ../include/lua/lua.h ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix2_lim.h \
+ ../include/lua/lauxlib.h ../include/lua/lua.h ../include/lua/lualib.h \
+ ../include/mylua/base.h ../include/char_base.h ../include/skill.h \
+ ../include/util.h ../include/title.h ../include/addressbook.h \
+ ../include/net.h ../include/autil.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ ../include/link.h ../include/longzoro/version.h
+init.o: init.c /usr/include/stdc-predef.h ../include/lua/lua.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lualib.h \
+ ../include/lua/lua.h ../include/lua/lauxlib.h /usr/include/stdio.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ ../include/mylua/base.h ../include/char_base.h ../include/version.h \
+ ../include/correct_bug.h ../include/common.h /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h ../include/longzoro/version.h \
+ ../include/longzoro/longzoro.h ../include/longzoro/debug.h \
+ ../include/skill.h ../include/util.h /usr/include/sys/time.h \
+ /usr/include/time.h /usr/include/bits/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/types.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ ../include/title.h ../include/addressbook.h ../include/net.h \
+ ../include/autil.h ../include/md5_encrypt.h /usr/include/xlocale.h \
+ /usr/include/string.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h
+charbase.o: charbase.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/char.h ../include/common.h \
+ /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/char_base.h ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/title.h \
+ ../include/addressbook.h ../include/net.h ../include/autil.h \
+ ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/battle.h \
+ ../include/trade.h ../include/object.h ../include/char_base.h \
+ ../include/enemy.h ../include/mylua/base.h ../include/npcutil.h \
+ ../include/readmap.h ../include/log.h ../include/pet.h \
+ ../include/longzoro/version.h ../include/handletime.h \
+ ../include/item_event.h ../include/lssproto_serv.h \
+ ../include/lssproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ ../include/mylua/mylua.h
+npcbase.o: npcbase.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/battle.h ../include/net.h \
+ ../include/common.h /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/autil.h ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/md5_encrypt.h /usr/include/time.h \
+ /usr/include/bits/time.h /usr/include/sys/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h \
+ /usr/include/sys/types.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/trade.h \
+ ../include/util.h /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_base.h \
+ ../include/skill.h ../include/title.h ../include/addressbook.h \
+ ../include/npccreate.h ../include/object.h ../include/char.h \
+ ../include/char_base.h ../include/char_data.h ../include/item.h \
+ ../include/char.h ../include/enemy.h ../include/npc_eventaction.h \
+ ../include/longzoro/version.h ../include/npcutil.h ../include/log.h \
+ ../include/npc_petshop.h ../include/npc_poolitemshop.h \
+ ../include/npc_freepetskillshop.h
+function.o: function.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/common.h /usr/include/stdio.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/char_base.h ../include/version.h ../include/correct_bug.h \
+ ../include/common.h ../include/longzoro/version.h \
+ ../include/longzoro/longzoro.h ../include/longzoro/debug.h \
+ ../include/skill.h ../include/util.h /usr/include/sys/time.h \
+ /usr/include/time.h /usr/include/bits/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/types.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ ../include/title.h ../include/addressbook.h ../include/net.h \
+ ../include/autil.h ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/item.h \
+ ../include/configfile.h ../include/battle.h ../include/trade.h \
+ ../include/mylua/base.h ../include/longzoro/version.h \
+ ../include/mylua/mylua.h
+lssprotobase.o: lssprotobase.c /usr/include/stdc-predef.h \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/math.h /usr/include/bits/huge_val.h \
+ /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h \
+ /usr/include/bits/inf.h /usr/include/bits/nan.h \
+ /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h \
+ ../include/char.h ../include/common.h /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h ../include/char_base.h \
+ ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/title.h \
+ ../include/addressbook.h ../include/net.h ../include/autil.h \
+ ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/char_base.h \
+ ../include/mylua/base.h ../include/lssproto_serv.h \
+ ../include/lssproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h
+battlebase.o: battlebase.c /usr/include/stdc-predef.h \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/longzoro/version.h \
+ ../include/longzoro/longzoro.h ../include/char_base.h \
+ ../include/version.h ../include/correct_bug.h ../include/common.h \
+ /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/longzoro/version.h ../include/longzoro/debug.h \
+ ../include/skill.h ../include/util.h /usr/include/sys/time.h \
+ /usr/include/time.h /usr/include/bits/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/types.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ ../include/title.h ../include/addressbook.h ../include/net.h \
+ ../include/autil.h ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/enemy.h \
+ ../include/object.h ../include/char.h ../include/char_base.h \
+ ../include/char_data.h ../include/item.h ../include/char.h \
+ ../include/lssproto_serv.h ../include/lssproto_util.h \
+ /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h ../include/battle.h \
+ ../include/trade.h ../include/battle_command.h ../include/mylua/mylua.h \
+ ../include/mylua/base.h
+objectbase.o: objectbase.c /usr/include/stdc-predef.h \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/char_base.h ../include/version.h \
+ ../include/correct_bug.h ../include/common.h /usr/include/stdio.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/title.h \
+ ../include/addressbook.h ../include/net.h ../include/autil.h \
+ ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/object.h \
+ ../include/longzoro/version.h ../include/readmap.h \
+ ../include/mylua/base.h
+mapbase.o: mapbase.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ ../include/char.h ../include/common.h /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h ../include/char_base.h \
+ ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/title.h \
+ ../include/addressbook.h ../include/net.h ../include/autil.h \
+ ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/object.h \
+ ../include/readmap.h ../include/map_deal.h ../include/char_base.h \
+ ../include/mylua/base.h ../include/lssproto_serv.h \
+ ../include/lssproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h
+otherbase.o: otherbase.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/sys/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h ../include/char.h \
+ ../include/common.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/char_base.h ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/types.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ ../include/title.h ../include/addressbook.h ../include/net.h \
+ ../include/autil.h ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/char_base.h \
+ ../include/mylua/base.h ../include/util.h ../include/lssproto_serv.h \
+ ../include/lssproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ ../include/mylua/mylua.h ../include/npc_scheduleman.h
+configbase.o: configbase.c /usr/include/stdc-predef.h \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/char.h ../include/common.h \
+ /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/char_base.h ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/title.h \
+ ../include/addressbook.h ../include/net.h ../include/autil.h \
+ ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/char_base.h \
+ ../include/mylua/base.h ../include/configfile.h
+itembase.o: itembase.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/common.h /usr/include/stdio.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/char_base.h ../include/version.h ../include/correct_bug.h \
+ ../include/common.h ../include/longzoro/version.h \
+ ../include/longzoro/longzoro.h ../include/longzoro/debug.h \
+ ../include/skill.h ../include/util.h /usr/include/sys/time.h \
+ /usr/include/time.h /usr/include/bits/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/types.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ ../include/title.h ../include/addressbook.h ../include/net.h \
+ ../include/autil.h ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/mylua/base.h \
+ ../include/char.h ../include/char_base.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/item.h \
+ ../include/lssproto_serv.h ../include/lssproto_util.h \
+ /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ ../include/mylua/mylua.h
+magicbase.o: magicbase.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/common.h /usr/include/stdio.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/char_talk.h ../include/common.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/net.h ../include/autil.h \
+ ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/md5_encrypt.h \
+ /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/mylua/base.h \
+ ../include/char_base.h ../include/skill.h ../include/title.h \
+ ../include/addressbook.h ../include/mylua/ablua.h \
+ ../include/magic_base.h ../include/lssproto_serv.h \
+ ../include/lssproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ ../include/mylua/mylua.h
+offlinebase.o: offlinebase.c /usr/include/stdc-predef.h \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/longzoro/version.h \
+ ../include/longzoro/longzoro.h ../include/char_base.h \
+ ../include/version.h ../include/correct_bug.h ../include/common.h \
+ /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/longzoro/version.h ../include/longzoro/debug.h \
+ ../include/skill.h ../include/util.h /usr/include/sys/time.h \
+ /usr/include/time.h /usr/include/bits/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/types.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ ../include/title.h ../include/addressbook.h ../include/net.h \
+ ../include/autil.h ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/enemy.h \
+ ../include/object.h ../include/char.h ../include/char_base.h \
+ ../include/char_data.h ../include/item.h ../include/char.h \
+ ../include/battle.h ../include/trade.h ../include/mylua/mylua.h
+netbase.o: netbase.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/lua/lua.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/longzoro/version.h \
+ ../include/longzoro/longzoro.h ../include/lua/lauxlib.h \
+ /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/net.h \
+ ../include/common.h /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/autil.h ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/debug.h \
+ ../include/md5_encrypt.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h \
+ /usr/include/sys/types.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/log.h
+enemytempbase.o: enemytempbase.c /usr/include/stdc-predef.h \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ ../include/char.h ../include/common.h /usr/include/errno.h \
+ /usr/include/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
+ /usr/include/asm-generic/errno-base.h ../include/char_base.h \
+ ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/title.h \
+ ../include/addressbook.h ../include/net.h ../include/autil.h \
+ ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/readmap.h \
+ ../include/map_deal.h ../include/char_base.h ../include/enemy.h \
+ ../include/mylua/base.h ../include/lssproto_serv.h \
+ ../include/lssproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h
+sasqlbase.o: sasqlbase.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/lua/lua.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/longzoro/version.h \
+ ../include/longzoro/longzoro.h ../include/lua/lauxlib.h \
+ /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/net.h \
+ ../include/common.h /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/autil.h ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/debug.h \
+ ../include/md5_encrypt.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h \
+ /usr/include/sys/types.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/log.h \
+ ../include/longzoro/sasql.h ../include/longzoro/version.h \
+ /usr/include/mysql/mysql.h /usr/include/mysql/mysql_version.h \
+ /usr/include/mysql/mysql_com.h /usr/include/mysql/mysql_time.h \
+ /usr/include/mysql/my_list.h /usr/include/mysql/typelib.h \
+ /usr/include/mysql/my_alloc.h
+saacproto.o: saacproto.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/char.h ../include/common.h \
+ /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/char_base.h ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/title.h \
+ ../include/addressbook.h ../include/net.h ../include/autil.h \
+ ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/char_base.h \
+ ../include/mylua/base.h ../include/saacproto_cli.h \
+ ../include/saacproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h
+family.o: family.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/char.h ../include/common.h \
+ /usr/include/stdio.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/char_base.h ../include/version.h ../include/correct_bug.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/title.h \
+ ../include/addressbook.h ../include/net.h ../include/autil.h \
+ ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char_data.h \
+ ../include/item.h ../include/char.h ../include/char_base.h \
+ ../include/family.h ../include/mylua/base.h ../include/saacproto_cli.h \
+ ../include/saacproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ ../include/npc_scheduleman.h ../include/npc_fmwarpman.h \
+ ../include/handletime.h
+petskill.o: petskill.c /usr/include/stdc-predef.h /usr/include/string.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/common.h /usr/include/stdio.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/version.h ../include/correct_bug.h ../include/common.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/pet_skill.h ../include/util.h \
+ /usr/include/sys/time.h /usr/include/time.h /usr/include/bits/time.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/sigset.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/sys/types.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-float.h ../include/mylua/base.h \
+ ../include/char_base.h ../include/version.h ../include/skill.h \
+ ../include/title.h ../include/addressbook.h ../include/net.h \
+ ../include/autil.h ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char.h \
+ ../include/char_base.h ../include/char_data.h ../include/item.h \
+ ../include/char.h ../include/item.h ../include/lssproto_serv.h \
+ ../include/lssproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ ../include/mylua/mylua.h
+profession_skill.o: profession_skill.c /usr/include/stdc-predef.h \
+ /usr/include/string.h /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
+ /usr/include/xlocale.h ../include/common.h /usr/include/stdio.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdarg.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/errno.h /usr/include/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ ../include/version.h ../include/correct_bug.h ../include/common.h \
+ ../include/longzoro/version.h ../include/longzoro/longzoro.h \
+ ../include/longzoro/debug.h ../include/profession_skill.h \
+ ../include/version.h ../include/mylua/base.h ../include/char_base.h \
+ ../include/skill.h ../include/util.h /usr/include/sys/time.h \
+ /usr/include/time.h /usr/include/bits/time.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/byteswap-16.h /usr/include/sys/types.h \
+ /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
+ ../include/title.h ../include/addressbook.h ../include/net.h \
+ ../include/autil.h ../include/md5_encrypt.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/sys/socket.h /usr/include/sys/uio.h /usr/include/bits/uio.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h /usr/include/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h /usr/include/bits/in.h \
+ /usr/include/signal.h /usr/include/bits/signum.h \
+ /usr/include/bits/siginfo.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/sigstack.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigthread.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
+ /usr/include/bits/setjmp.h ../include/link.h ../include/lua/lua.h \
+ ../include/lua/luaconf.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h ../include/lua/lauxlib.h \
+ ../include/lua/lua.h ../include/lua/lualib.h ../include/char.h \
+ ../include/char_base.h ../include/char_data.h ../include/item.h \
+ ../include/char.h ../include/item.h ../include/lssproto_serv.h \
+ ../include/lssproto_util.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h

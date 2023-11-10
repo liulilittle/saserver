@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="1759|Win32">
+      <Configuration>1759</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="175sa|Win32">
+      <Configuration>175sa</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="182sa2|Win32">
+      <Configuration>182sa2</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="182sa|Win32">
+      <Configuration>182sa</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="479sa|Win32">
+      <Configuration>479sa</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="hightype|Win32">
+      <Configuration>hightype</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="high|Win32">
+      <Configuration>high</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="shiqipk|Win32">
+      <Configuration>shiqipk</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="shiqivip|Win32">
+      <Configuration>shiqivip</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="u3d|Win32">
+      <Configuration>u3d</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BC227BE5-56E6-4EF2-B6D7-859A07B3BA50}</ProjectGuid>
+    <RootNamespace>gmsv</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='175sa|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='182sa|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='182sa2|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='1759|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='shiqivip|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='high|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='u3d|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='hightype|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='shiqipk|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='479sa|Win32'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='175sa|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='182sa|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='182sa2|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='1759|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='shiqivip|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='high|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='u3d|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='hightype|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='shiqipk|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='175sa|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='182sa|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='182sa2|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='1759|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='shiqivip|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='high|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='u3d|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='hightype|Win32'">
+    <IncludePath>include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='shiqipk|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='479sa|Win32'">
+    <IncludePath>E:\code\saserver\gmsv\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_515SA_</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='175sa|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='182sa|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_;_NEW_STONEAGE_TYPE</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='182sa2|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_;_NEW_STONEAGE_TYPE;_182_SA_2</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='1759|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_;_NEW_STONEAGE_TYPE;_175_SA_2</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='shiqivip|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_;_NEW_STONEAGE_TYPE;_175_SA_2;_SHIQIVIP</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='high|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_;_NEW_STONEAGE_TYPE;_175_SA_2;_HIGH_TYPE</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='u3d|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_;_NEW_STONEAGE_TYPE;_175_SA_2;_U3D_VERSION</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='hightype|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_;_VERSION_80;_NEW_STONEAGE_TYPE</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='shiqipk|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='479sa|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_NO_WAIGUA;_175_SA_;_NEW_STONEAGE_TYPE;_175_SA_2;_479SA</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="autil.c" />
+    <ClCompile Include="battle\battle.c" />
+    <ClCompile Include="battle\battle_ai.c" />
+    <ClCompile Include="battle\battle_command.c" />
+    <ClCompile Include="battle\battle_event.c" />
+    <ClCompile Include="battle\battle_item.c" />
+    <ClCompile Include="battle\battle_magic.c" />
+    <ClCompile Include="battle\pet_skill.c" />
+    <ClCompile Include="battle\profession_skill.c" />
+    <ClCompile Include="buf.c" />
+    <ClCompile Include="callfromac.c" />
+    <ClCompile Include="callfromcli.c" />
+    <ClCompile Include="char\addressbook.c" />
+    <ClCompile Include="char\char.c" />
+    <ClCompile Include="char\char_angel.c" />
+    <ClCompile Include="char\char_base.c" />
+    <ClCompile Include="char\char_data.c" />
+    <ClCompile Include="char\char_event.c" />
+    <ClCompile Include="char\char_item.c" />
+    <ClCompile Include="char\char_party.c" />
+    <ClCompile Include="char\char_talk.c" />
+    <ClCompile Include="char\char_walk.c" />
+    <ClCompile Include="char\chatmagic.c" />
+    <ClCompile Include="char\chatroom.c" />
+    <ClCompile Include="char\encount.c" />
+    <ClCompile Include="char\enemy.c" />
+    <ClCompile Include="char\event.c" />
+    <ClCompile Include="char\family.c" />
+    <ClCompile Include="char\pet.c" />
+    <ClCompile Include="char\petmail.c" />
+    <ClCompile Include="char\pet_event.c" />
+    <ClCompile Include="char\skill.c" />
+    <ClCompile Include="char\title.c" />
+    <ClCompile Include="char\trade.c" />
+    <ClCompile Include="configfile.c" />
+    <ClCompile Include="descrypt.c" />
+    <ClCompile Include="function.c" />
+    <ClCompile Include="handletime.c" />
+    <ClCompile Include="init.c" />
+    <ClCompile Include="item\item.c" />
+    <ClCompile Include="item\item_event.c" />
+    <ClCompile Include="item\item_gen.c" />
+    <ClCompile Include="link.c" />
+    <ClCompile Include="log.c" />
+    <ClCompile Include="longzoro\aes.c" />
+    <ClCompile Include="longzoro\base64.c" />
+    <ClCompile Include="longzoro\blowfish.c" />
+    <ClCompile Include="longzoro\characters.c" />
+    <ClCompile Include="longzoro\crypto.c" />
+    <ClCompile Include="longzoro\luckstar.c" />
+    <ClCompile Include="longzoro\move.c" />
+    <ClCompile Include="longzoro\newshop.c" />
+    <ClCompile Include="longzoro\playerquestion.c" />
+    <ClCompile Include="longzoro\sasql_linux.c" />
+    <ClCompile Include="longzoro\xxtea.c" />
+    <ClCompile Include="lssproto_serv.c" />
+    <ClCompile Include="lssproto_util.c" />
+    <ClCompile Include="magic\magic.c" />
+    <ClCompile Include="magic\magic_base.c" />
+    <ClCompile Include="magic\magic_field.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="map\map_deal.c" />
+    <ClCompile Include="map\map_util.c" />
+    <ClCompile Include="map\map_warppoint.c" />
+    <ClCompile Include="map\readmap.c" />
+    <ClCompile Include="md5_encrypt.c" />
+    <ClCompile Include="msignal.c" />
+    <ClCompile Include="mylua\ablua.c" />
+    <ClCompile Include="mylua\battlebase.c" />
+    <ClCompile Include="mylua\charbase.c" />
+    <ClCompile Include="mylua\configbase.c" />
+    <ClCompile Include="mylua\enemytempbase.c" />
+    <ClCompile Include="mylua\family.c" />
+    <ClCompile Include="mylua\function.c" />
+    <ClCompile Include="mylua\init.c" />
+    <ClCompile Include="mylua\itembase.c" />
+    <ClCompile Include="mylua\lssprotobase.c" />
+    <ClCompile Include="mylua\magicbase.c" />
+    <ClCompile Include="mylua\mapbase.c" />
+    <ClCompile Include="mylua\mylua.c" />
+    <ClCompile Include="mylua\netbase.c" />
+    <ClCompile Include="mylua\npcbase.c" />
+    <ClCompile Include="mylua\objectbase.c" />
+    <ClCompile Include="mylua\offlinebase.c" />
+    <ClCompile Include="mylua\otherbase.c" />
+    <ClCompile Include="mylua\petskill.c" />
+    <ClCompile Include="mylua\profession_skill.c" />
+    <ClCompile Include="mylua\saacproto.c" />
+    <ClCompile Include="mylua\sasqlbase.c" />
+    <ClCompile Include="net.c" />
+    <ClCompile Include="npc\npccreate.c" />
+    <ClCompile Include="npc\npcgen.c" />
+    <ClCompile Include="npc\npctemplate.c" />
+    <ClCompile Include="npc\npcutil.c" />
+    <ClCompile Include="npc\npc_action.c" />
+    <ClCompile Include="npc\npc_airplane.c" />
+    <ClCompile Include="npc\npc_alldoman.c" />
+    <ClCompile Include="npc\npc_autopk.c" />
+    <ClCompile Include="npc\npc_bankman.c" />
+    <ClCompile Include="npc\npc_bodylan.c" />
+    <ClCompile Include="npc\npc_bus.c" />
+    <ClCompile Include="npc\npc_charm.c" />
+    <ClCompile Include="npc\npc_checkman.c" />
+    <ClCompile Include="npc\npc_dengon.c" />
+    <ClCompile Include="npc\npc_door.c" />
+    <ClCompile Include="npc\npc_doorman.c" />
+    <ClCompile Include="npc\npc_duelranking.c" />
+    <ClCompile Include="npc\npc_eventaction.c" />
+    <ClCompile Include="npc\npc_exchangeman.c" />
+    <ClCompile Include="npc\npc_familyman.c" />
+    <ClCompile Include="npc\npc_fmchallenge.c" />
+    <ClCompile Include="npc\npc_fmdengon.c" />
+    <ClCompile Include="npc\npc_fmhealer.c" />
+    <ClCompile Include="npc\npc_fmletter.c" />
+    <ClCompile Include="npc\npc_fmpkcallman.c" />
+    <ClCompile Include="npc\npc_fmpkman.c" />
+    <ClCompile Include="npc\npc_fmwarpman.c" />
+    <ClCompile Include="npc\npc_freepetskillshop.c" />
+    <ClCompile Include="npc\npc_gamblebank.c" />
+    <ClCompile Include="npc\npc_gamblemaster.c" />
+    <ClCompile Include="npc\npc_gambleroulette.c" />
+    <ClCompile Include="npc\npc_healer.c" />
+    <ClCompile Include="npc\npc_itemchange.c" />
+    <ClCompile Include="npc\npc_itemshop.c" />
+    <ClCompile Include="npc\npc_janken.c" />
+    <ClCompile Include="npc\npc_luckyman.c" />
+    <ClCompile Include="npc\npc_makepair.c" />
+    <ClCompile Include="npc\npc_manorsman.c" />
+    <ClCompile Include="npc\npc_mic.c" />
+    <ClCompile Include="npc\npc_msg.c" />
+    <ClCompile Include="npc\npc_newnpcman.c" />
+    <ClCompile Include="npc\npc_newvipshop.c" />
+    <ClCompile Include="npc\npc_npcenemy.c" />
+    <ClCompile Include="npc\npc_oldman.c" />
+    <ClCompile Include="npc\npc_pauctionman.c" />
+    <ClCompile Include="npc\npc_petfusion.c" />
+    <ClCompile Include="npc\npc_petmaker.c" />
+    <ClCompile Include="npc\npc_petracemaster.c" />
+    <ClCompile Include="npc\npc_petracepet.c" />
+    <ClCompile Include="npc\npc_petshop.c" />
+    <ClCompile Include="npc\npc_petskillshop.c" />
+    <ClCompile Include="npc\npc_poolitemshop.c" />
+    <ClCompile Include="npc\npc_quiz.c" />
+    <ClCompile Include="npc\npc_riderman.c" />
+    <ClCompile Include="npc\npc_roomadminnew.c" />
+    <ClCompile Include="npc\npc_sample.c" />
+    <ClCompile Include="npc\npc_savepoint.c" />
+    <ClCompile Include="npc\npc_scheduleman.c" />
+    <ClCompile Include="npc\npc_ship.c" />
+    <ClCompile Include="npc\npc_signboard.c" />
+    <ClCompile Include="npc\npc_simpleshop.c" />
+    <ClCompile Include="npc\npc_storyteller.c" />
+    <ClCompile Include="npc\npc_sysinfo.c" />
+    <ClCompile Include="npc\npc_timeman.c" />
+    <ClCompile Include="npc\npc_townpeople.c" />
+    <ClCompile Include="npc\npc_transerman.c" />
+    <ClCompile Include="npc\npc_transmigration.c" />
+    <ClCompile Include="npc\npc_vipshop.c" />
+    <ClCompile Include="npc\npc_warp.c" />
+    <ClCompile Include="npc\npc_warpman.c" />
+    <ClCompile Include="npc\npc_welfare.c" />
+    <ClCompile Include="npc\npc_windowhealer.c" />
+    <ClCompile Include="npc\npc_windowman.c" />
+    <ClCompile Include="npc\readnpc.c" />
+    <ClCompile Include="object.c" />
+    <ClCompile Include="saacproto_cli.c" />
+    <ClCompile Include="saacproto_util.c" />
+    <ClCompile Include="shop.c" />
+    <ClCompile Include="util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\addressbook.h" />
+    <ClInclude Include="include\aes.h" />
+    <ClInclude Include="include\anim_tbl.h" />
+    <ClInclude Include="include\autil.h" />
+    <ClInclude Include="include\base64.h" />
+    <ClInclude Include="include\battle.h" />
+    <ClInclude Include="include\battle_ai.h" />
+    <ClInclude Include="include\battle_command.h" />
+    <ClInclude Include="include\battle_event.h" />
+    <ClInclude Include="include\battle_item.h" />
+    <ClInclude Include="include\battle_magic.h" />
+    <ClInclude Include="include\blowfish.h" />
+    <ClInclude Include="include\buf.h" />
+    <ClInclude Include="include\char.h" />
+    <ClInclude Include="include\char_base.h" />
+    <ClInclude Include="include\char_data.h" />
+    <ClInclude Include="include\char_event.h" />
+    <ClInclude Include="include\char_talk.h" />
+    <ClInclude Include="include\chatmagic.h" />
+    <ClInclude Include="include\chatroom.h" />
+    <ClInclude Include="include\common.h" />
+    <ClInclude Include="include\configfile.h" />
+    <ClInclude Include="include\correct_bug.h" />
+    <ClInclude Include="include\defaultGroundEnemy.h" />
+    <ClInclude Include="include\defaultPlayer.h" />
+    <ClInclude Include="include\encount.h" />
+    <ClInclude Include="include\enemy.h" />
+    <ClInclude Include="include\enemyexptbl.h" />
+    <ClInclude Include="include\event.h" />
+    <ClInclude Include="include\family.h" />
+    <ClInclude Include="include\function.h" />
+    <ClInclude Include="include\ggsrv30.h" />
+    <ClInclude Include="include\handletime.h" />
+    <ClInclude Include="include\init.h" />
+    <ClInclude Include="include\item.h" />
+    <ClInclude Include="include\item_event.h" />
+    <ClInclude Include="include\item_gen.h" />
+    <ClInclude Include="include\item_trade.h" />
+    <ClInclude Include="include\levelup.h" />
+    <ClInclude Include="include\link.h" />
+    <ClInclude Include="include\log.h" />
+    <ClInclude Include="include\longzoro\allblues.h" />
+    <ClInclude Include="include\longzoro\attestation.h" />
+    <ClInclude Include="include\longzoro\characters.h" />
+    <ClInclude Include="include\longzoro\debug.h" />
+    <ClInclude Include="include\longzoro\longzoro.h" />
+    <ClInclude Include="include\longzoro\luckstar.h" />
+    <ClInclude Include="include\longzoro\move.h" />
+    <ClInclude Include="include\longzoro\newshop.h" />
+    <ClInclude Include="include\longzoro\playerquestion.h" />
+    <ClInclude Include="include\longzoro\sasql.h" />
+    <ClInclude Include="include\longzoro\version.h" />
+    <ClInclude Include="include\lssproto_serv.h" />
+    <ClInclude Include="include\lssproto_util.h" />
+    <ClInclude Include="include\magic.h" />
+    <ClInclude Include="include\magic_base.h" />
+    <ClInclude Include="include\magic_field.h" />
+    <ClInclude Include="include\map_deal.h" />
+    <ClInclude Include="include\map_util.h" />
+    <ClInclude Include="include\map_warppoint.h" />
+    <ClInclude Include="include\mclient.h" />
+    <ClInclude Include="include\md5_encrypt.h" />
+    <ClInclude Include="include\msignal.h" />
+    <ClInclude Include="include\mylua\ablua.h" />
+    <ClInclude Include="include\mylua\base.h" />
+    <ClInclude Include="include\mylua\function.h" />
+    <ClInclude Include="include\mylua\mylua.h" />
+    <ClInclude Include="include\net.h" />
+    <ClInclude Include="include\npccreate.h" />
+    <ClInclude Include="include\npcgen.h" />
+    <ClInclude Include="include\npcserver.h" />
+    <ClInclude Include="include\npctemplate.h" />
+    <ClInclude Include="include\npcutil.h" />
+    <ClInclude Include="include\npc_action.h" />
+    <ClInclude Include="include\npc_airplane.h" />
+    <ClInclude Include="include\npc_alldoman.h" />
+    <ClInclude Include="include\npc_autopk.h" />
+    <ClInclude Include="include\npc_bankman.h" />
+    <ClInclude Include="include\npc_bodylan.h" />
+    <ClInclude Include="include\npc_bus.h" />
+    <ClInclude Include="include\npc_charm.h" />
+    <ClInclude Include="include\npc_checkman.h" />
+    <ClInclude Include="include\npc_Dengon.h" />
+    <ClInclude Include="include\npc_door.h" />
+    <ClInclude Include="include\npc_doorman.h" />
+    <ClInclude Include="include\npc_duelranking.h" />
+    <ClInclude Include="include\npc_eventaction.h" />
+    <ClInclude Include="include\npc_exchangeman.h" />
+    <ClInclude Include="include\npc_familyman.h" />
+    <ClInclude Include="include\npc_fmdengon.h" />
+    <ClInclude Include="include\npc_fmhealer.h" />
+    <ClInclude Include="include\npc_fmletter.h" />
+    <ClInclude Include="include\npc_fmpkcallman.h" />
+    <ClInclude Include="include\npc_fmpkman.h" />
+    <ClInclude Include="include\npc_fmwarpman.h" />
+    <ClInclude Include="include\npc_freepetskillshop.h" />
+    <ClInclude Include="include\npc_gamblebank.h" />
+    <ClInclude Include="include\npc_gamblemaster.h" />
+    <ClInclude Include="include\npc_gambleroulette.h" />
+    <ClInclude Include="include\npc_healer.h" />
+    <ClInclude Include="include\npc_itemchange.h" />
+    <ClInclude Include="include\npc_itemshop.h" />
+    <ClInclude Include="include\npc_janken.h" />
+    <ClInclude Include="include\npc_luckyman.h" />
+    <ClInclude Include="include\npc_makepair.h" />
+    <ClInclude Include="include\npc_manorsman.h" />
+    <ClInclude Include="include\npc_mic.h" />
+    <ClInclude Include="include\npc_msg.h" />
+    <ClInclude Include="include\npc_mtradenpcman.h" />
+    <ClInclude Include="include\npc_newnpcman.h" />
+    <ClInclude Include="include\npc_newvipshop.h" />
+    <ClInclude Include="include\npc_npcenemy.h" />
+    <ClInclude Include="include\npc_oldman.h" />
+    <ClInclude Include="include\npc_pauctionman.h" />
+    <ClInclude Include="include\npc_petfusion.h" />
+    <ClInclude Include="include\npc_petmaker.h" />
+    <ClInclude Include="include\npc_petracemaster.h" />
+    <ClInclude Include="include\npc_petracepet.h" />
+    <ClInclude Include="include\npc_petshop.h" />
+    <ClInclude Include="include\npc_petskillshop.h" />
+    <ClInclude Include="include\npc_pettransman.h" />
+    <ClInclude Include="include\npc_poolitemshop.h" />
+    <ClInclude Include="include\npc_quiz.h" />
+    <ClInclude Include="include\npc_riderman.h" />
+    <ClInclude Include="include\npc_roomadminnew.h" />
+    <ClInclude Include="include\npc_sample.h" />
+    <ClInclude Include="include\npc_savepoint.h" />
+    <ClInclude Include="include\npc_scheduleman.h" />
+    <ClInclude Include="include\npc_sellsthman.h" />
+    <ClInclude Include="include\npc_signboard.h" />
+    <ClInclude Include="include\npc_simpleshop.h" />
+    <ClInclude Include="include\npc_stoneserviceman.h" />
+    <ClInclude Include="include\npc_storyteller.h" />
+    <ClInclude Include="include\npc_sysinfo.h" />
+    <ClInclude Include="include\npc_timeman.h" />
+    <ClInclude Include="include\npc_townpeople.h" />
+    <ClInclude Include="include\npc_transerman.h" />
+    <ClInclude Include="include\npc_transmigration.h" />
+    <ClInclude Include="include\npc_vipshop.h" />
+    <ClInclude Include="include\npc_warp.h" />
+    <ClInclude Include="include\npc_warpman.h" />
+    <ClInclude Include="include\npc_welfare.h" />
+    <ClInclude Include="include\npc_welfare2.h" />
+    <ClInclude Include="include\npc_windowhealer.h" />
+    <ClInclude Include="include\npc_windowman.h" />
+    <ClInclude Include="include\object.h" />
+    <ClInclude Include="include\pet.h" />
+    <ClInclude Include="include\petmail.h" />
+    <ClInclude Include="include\pet_event.h" />
+    <ClInclude Include="include\pet_skill.h" />
+    <ClInclude Include="include\pet_skillinfo.h" />
+    <ClInclude Include="include\profession_skill.h" />
+    <ClInclude Include="include\readmap.h" />
+    <ClInclude Include="include\readnpc.h" />
+    <ClInclude Include="include\saacproto_cli.h" />
+    <ClInclude Include="include\saacproto_util.h" />
+    <ClInclude Include="include\shop.h" />
+    <ClInclude Include="include\skill.h" />
+    <ClInclude Include="include\sndcnf.h" />
+    <ClInclude Include="include\title.h" />
+    <ClInclude Include="include\trade.h" />
+    <ClInclude Include="include\util.h" />
+    <ClInclude Include="include\version.h" />
+    <ClInclude Include="include\version_pk.h" />
+    <ClInclude Include="include\xxtea.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
